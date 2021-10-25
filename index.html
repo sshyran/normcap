@@ -15,10 +15,9 @@
 <body>
   <nav class="container-fluid">
     <ul>
-      <li>
-        <a href="./" class="contrast" onclick="event.preventDefault()">
-          <strong>N</strong>
-        </a>
+      <li id="logo">
+        <img src="assets/icons/normcap.svg">
+        <strong class="contrast">NormCap</strong>
       </li>
     </ul>
     <ul>
@@ -118,7 +117,70 @@
 
     <article id="usage">
       <h3>Usage</h3>
-      something
+      <h4>General</h4>
+      <ul>
+        <li>Start NormCap an wait until a pink border appears</li>
+        <li>Select a region on screen with your mouse<br />
+        <li>Paste the recognized text from the clipboard into anywhere</li>
+        <li>To configure NormCap use the settings menu (⚙) in the top left</li>
+        <li>To abort a capture or quit NormCap press <code>&lt;esc&gt;</code></li>
+      </ul>
+
+      <h4>Capture Modes</h4>
+      <p>The settings menu (⚙) allows switching between two capture modes:</p>
+      <h5>"Raw"-Mode</h5>
+      <p>
+        Outputs the detected text just as detected by the OCR software. Keeps the text
+        as recognized, e.g. doesn't remove line-breaks.
+      </p>
+      <h5>"Parse"-Mode <small>(default)</small></h5>
+      <p>
+        Performs some formatting of the output based on certain implemented rules, which
+        can take additional information like text position into account.
+      </p>
+      <p>
+        In a first step, every rule calculates a "score" to determine the likelihood of being
+        responsible for this type of text. In a second step, the rule which achieved the highest
+        "score" takes the necessary actions to "transform" the input text according to its
+        type. Those rules are currently implemented:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th><strong>Rule</strong></th>
+            <th><strong>Score</strong></th>
+            <th><strong>Transform</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Single line</strong></td>
+            <td>Only single line is detected</td>
+            <td>Trim unnecessary whitespace</td>
+          </tr>
+          <tr>
+            <td><strong>Multi line</strong></td>
+            <td>Multi lines, but single Paragraph</td>
+            <td>Separate using line breaks and trim unnecessary whitespace in each line</td>
+          </tr>
+          <tr>
+            <td><strong>Paragraph</strong></td>
+            <td>Multiple blocks of lines or multiple paragraphs</td>
+            <td>Join every paragraph into a single line, separate different paragraphs by empty line</td>
+          </tr>
+          <tr>
+            <td><strong>E-Mail</strong></td>
+            <td>Number of chars in email addresses vs. overall chars</td>
+            <td>Transform to a comma-separated list of email addresses</td>
+          </tr>
+          <tr>
+            <td><strong>URL</strong></td>
+            <td>Number of chars in URLs vs. overall chars</td>
+            <td>Transform to line-break separated URLs</td>
+          </tr>
+        </tbody>
+      </table>
+
     </article>
 
     <article id="faqs">
@@ -226,15 +288,17 @@
         </p>
         <pre><code>$ /Applications/NormCap.app/Contents/MacOS/NormCap --help</code></pre>
         <p>
-          To  <em>create a launcher</em> with command line arguments, launch the "Script Editor" and make a new script with the desired command line
+          To <em>create a launcher</em> with command line arguments, launch the "Script Editor" and make a new script
+          with the desired command line
           arguments, e.g.:
         </p>
         <pre><code>do shell script "exec /Applications/NormCap.app/Contents/MacOS/NormCap --tray"s</code></pre>
         <p>
-          Save the script as type "Application" in the folder "/Applications"<br/>
+          Save the script as type "Application" in the folder "/Applications"<br />
           <small>
             (When this new Application is started, an additional Icon will show up in the
-            Dock. If you know a way to avoid this, please <a href="https://github.com/dynobo/normcap/issues">open an issue</a>)
+            Dock. If you know a way to avoid this, please <a href="https://github.com/dynobo/normcap/issues">open an
+              issue</a>)
           </small>
         </p>
       </details>
@@ -340,7 +404,7 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
       </hgroup>
 
       <details>
-        <summary><b>Prebuild vs. Python package</b></summary>
+        <summary><b>Comparision to prebuild packages</b></summary>
         <div class="row comparison">
           <div class="col-sm-6">
             <p>Prebuild:</p>

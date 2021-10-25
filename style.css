@@ -52,12 +52,21 @@ details[open] > summary {
   margin-bottom: var(--spacing);
 }
 
+#logo > img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 5px;
+}
+#logo > strong {
+  color: var(--contrast);
+}
+
 .feature {
   width: calc(100% - var(--spacing));
   padding-top: calc(56.25% - var(--spacing));
   transform: scale(1.001);
   background-repeat: no-repeat;
-  background-size: 200% auto;
+  background-size: cover;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 1.125px 8px 0px,
     rgba(0, 0, 0, 0.12) 0px 1.125px 16px 0px,
     rgba(0, 0, 0, 0.035) 0px 0px 0px 1.0625px;
@@ -82,13 +91,13 @@ details[open] > summary {
   background-image: url("/img/placeholder.png");
 }
 .feature.feature-4 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/languages.png");
 }
 .feature.feature-5 {
   background-image: url("/img/placeholder.png");
 }
 .feature.feature-6 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/tray.png");
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -97,6 +106,7 @@ details[open] > summary {
     --primary-hover: #c2185b;
     --primary-focus: rgba(216, 27, 96, 0.125);
     --primary-inverse: #fff;
+    --border-color: rgba(128, 136, 141, 0.2);
     --secondary: var(--primary);
     --secondary-hover: var(--primary-hover);
     --secondary-focus: var(--primary-focus);
@@ -107,6 +117,8 @@ details[open] > summary {
     --form-element-background-color: var(--card-background-color);
     --card-border-color: var(--background-color);
     --card-sectionning-background-color: #2e3233;
+    --table-border-color: var(--border-color);
+    --accordion-border-color: var(--border-color);
     --accordion-open-summary-color: var(--primary);
     --accordion-active-summary-color: var(--primary);
   }
