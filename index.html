@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+  <title>NormCap</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NormCap</title>
   <meta name="description" content="OCR-powered screenshot tool to capture text instead of images." />
+
   <link rel="canonical" href="https://dynobo.github.io/normcap/" />
   <link rel="stylesheet" href="pico-bootstrap.css" />
   <link rel="stylesheet" href="style.css" />
@@ -41,38 +42,47 @@
       </li>
     </ul>
   </nav>
+
   <main class="container">
+
     <article id="download" class="grid">
+      <a id="link-to-source" href="https://github.com/dynobo/normcap" target="_new"></a>
       <div>
         <hgroup>
           <h1>NormCap v0.2.8</h1>
           <h2>
-            <a href="https://en.wikipedia.org/wiki/Optical_character_recognition" target="_new">OCR</a>-powered screenshot
-            tool to capture text instead of images.
+            <a href="https://en.wikipedia.org/wiki/Optical_character_recognition" target="_new">OCR</a>
+            -powered screenshot tool to capture text instead of images.
           </h2>
         </hgroup>
-        <p>Packages with the <a href="https://github.com/dynobo/normcap/blob/main/CHANGELOG.md" target="_new">latest changes</a> for your system:</p>
+        <p>
+          Packages with the
+          <a href="https://github.com/dynobo/normcap/blob/main/CHANGELOG.md" target="_new">latest changes</a>
+          for your system:
+        </p>
         <ul>
           <li>
-            <a href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-Windows.msi">NormCap-<b>Windows</b>.exe</a>
+            <a
+              href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-Windows.msi">NormCap-<b>Windows</b>.exe</a>
             <small>~120 MB</small>
             <span data-tooltip="Run installer and start through start menu">🛈</span>
           </li>
           <li>
-            <a href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-Linux.AppImage">NormCap-<b>Linux</b>.AppImage</a>
+            <a
+              href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-Linux.AppImage">NormCap-<b>Linux</b>.AppImage</a>
             <small>~140 MB</small>
             <span data-tooltip="Make the file executable and run it">🛈</span>
           </li>
           <li>
-            <a href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-MacOS.dmg">NormCap-<b>MacOS</b>.dmg</a>
+            <a
+              href="https://github.com/dynobo/normcap/releases/download/v0.2.8/NormCap-MacOS.dmg">NormCap-<b>MacOS</b>.dmg</a>
             <small>~105 MB</small>
-            <span class="wide-tooltip" data-tooltip="Unsigned application! You have to grant permissions on first start:&#10;&#13;'System Preferences' → 'Security & Privacy' → 'General' → 'Open anyway'.&#10;&#13;(You might have to grant permissions to take screenshots, too.)">🛈</span>
+            <span class="wide-tooltip"
+              data-tooltip="Unsigned application! You have to grant permissions on first start:&#10;&#13;'System Preferences' → 'Security & Privacy' → 'General' → 'Open anyway'.&#10;&#13;(You might have to grant permissions to take screenshots, too.)">🛈</span>
           </li>
         </ul>
         <p class="align-right">
-          <small>... or
-            <a href="#python-package">install the Python package</a>
-            instead.</small>
+          <small>... or <a href="#python-package">install the Python package</a> instead.</small>
         </p>
       </div>
       <div></div>
@@ -81,12 +91,9 @@
     <article id="features">
       <hgroup>
         <h2>Features</h2>
-        <h3>
-          Characteristics and functionalities that make NormCap interesting.
-        </h3>
+        <h3>Characteristics and functionalities that make NormCap interesting.</h3>
       </hgroup>
-
-      <div id="features" class="row features">
+      <div class="row features">
         <div class="col-md-6 col-lg-6 col-xl-4">
           <div class="feature feature-1">
             <b>Free & Open Source</b>
@@ -123,9 +130,7 @@
     <article id="usage">
       <hgroup>
         <h2>Usage</h2>
-        <h3>
-          A short guide for using NormCap and its most important features.
-        </h3>
+        <h3>A short guide for using NormCap and its most important features.</h3>
       </hgroup>
       <h4>Quickstart</h4>
       <ol>
@@ -133,81 +138,89 @@
         <li>Select a region on screen with your mouse.</li>
         <li>Paste the recognized text from the clipboard anywhere you like.</li>
       </ol>
-        <h4>User Interface</h4>
-        <ul>
+      <h4>User Interface</h4>
+      <ul>
         <li>The settings can be accessed via the <span class="primary">⚙</span>-icon in the top right.</li>
-        <li>In the settings you can adjust the language(s) you are trying to recognize, which is important for a good accuracy.</li>
-        <li>The icons <span class="primary">★</span> or <span class="primary">☰</span> next to the selection-rectangle indicate the active "capture mode" (see below).</li>
+        <li>In the settings you can adjust the language(s) you are trying to recognize, which is important for a good
+          accuracy.</li>
+        <li>The icons <span class="primary">★</span> or <span class="primary">☰</span> next to the selection-rectangle
+          indicate the active "capture mode" (see below).</li>
         <li>To abort a capture or quit NormCap press <code>&lt;esc&gt;</code></li>
       </ul>
 
       <h4>Capture Modes</h4>
-      <p>The settings menu <span class="primary">⚙</span> allows switching between the two capture modes: "parse" and "raw":</p>
-      <ul><li>
-      <p><strong>"Raw"-Mode </strong></p>
-      <p>
-        Marked by the <span class="primary">☰</span> symbol, it outputs the detected text just as detected by the OCR software. Keeps the text
-        as recognized, e.g. doesn't remove line-breaks.
-      </p></li>
-      <li><p><strong>"Parse"-Mode</strong> <small>(default)</small></p>
-      <p>
-        Indicated by the <span class="primary">★</span> symbol, it performs some formatting of the output based on certain implemented rules, which
-        can take additional information like text position into account.
-        In a first step, every rule calculates a "score" to determine the likelihood of being
-        responsible for this type of text. In a second step, the rule which achieved the highest
-        "score" takes the necessary actions to "transform" the input text according to its
-        type. Those rules are currently implemented:
-      </p>
-      <table>
-        <thead>
-          <tr>
-            <th><strong>Rule&NonBreakingSpace;name</strong></th>
-            <th><strong>Score heuristics</strong></th>
-            <th><strong>Transform</strong></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Single line</strong></td>
-            <td>Only single line is detected</td>
-            <td>Trim unnecessary whitespace</td>
-          </tr>
-          <tr>
-            <td><strong>Multi line</strong></td>
-            <td>Multiple lines, but single paragraph</td>
-            <td>Separate using line breaks and trim unnecessary whitespace in each line</td>
-          </tr>
-          <tr>
-            <td><strong>Paragraph</strong></td>
-            <td>Multiple blocks of lines or multiple paragraphs</td>
-            <td>Join every paragraph into a single line, separate different paragraphs by empty line</td>
-          </tr>
-          <tr>
-            <td><strong>E-Mail</strong></td>
-            <td>Number of chars in email addresses vs. overall chars</td>
-            <td>Transform to a comma-separated list of email addresses</td>
-          </tr>
-          <tr>
-            <td><strong>URL</strong></td>
-            <td>Number of chars in URLs vs. overall chars</td>
-            <td>Transform to line-break separated URLs</td>
-          </tr>
-        </tbody>
-      </table></li>
-</ul>
+      <p>The settings menu <span class="primary">⚙</span> allows switching between the two capture modes: "parse" and
+        "raw":</p>
+      <ul>
+        <li>
+          <p><strong>"Raw"-Mode </strong></p>
+          <p>
+            Marked by the <span class="primary">☰</span> symbol, it outputs the detected text just as detected by the
+            OCR software. Keeps the text
+            as recognized, e.g. doesn't remove line-breaks.
+          </p>
+        </li>
+        <li>
+          <p><strong>"Parse"-Mode</strong> <small>(default)</small></p>
+          <p>
+            Indicated by the <span class="primary">★</span> symbol, it performs some formatting of the output based on
+            certain implemented rules, which
+            can take additional information like text position into account.
+            In a first step, every rule calculates a "score" to determine the likelihood of being
+            responsible for this type of text. In a second step, the rule which achieved the highest
+            "score" takes the necessary actions to "transform" the input text according to its
+            type. Those rules are currently implemented:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th><strong>Rule&NonBreakingSpace;name</strong></th>
+                <th><strong>Score heuristics</strong></th>
+                <th><strong>Transform</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Single line</strong></td>
+                <td>Only single line is detected</td>
+                <td>Trim unnecessary whitespace</td>
+              </tr>
+              <tr>
+                <td><strong>Multi line</strong></td>
+                <td>Multiple lines, but single paragraph</td>
+                <td>Separate using line breaks and trim unnecessary whitespace in each line</td>
+              </tr>
+              <tr>
+                <td><strong>Paragraph</strong></td>
+                <td>Multiple blocks of lines or multiple paragraphs</td>
+                <td>Join every paragraph into a single line, separate different paragraphs by empty line</td>
+              </tr>
+              <tr>
+                <td><strong>E-Mail</strong></td>
+                <td>Number of chars in email addresses vs. overall chars</td>
+                <td>Transform to a comma-separated list of email addresses</td>
+              </tr>
+              <tr>
+                <td><strong>URL</strong></td>
+                <td>Number of chars in URLs vs. overall chars</td>
+                <td>Transform to line-break separated URLs</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
     </article>
 
     <article id="support">
       <hgroup>
         <h2>Support</h2>
-        <h3>
-          When things did not went as expected.
-        </h3>
+        <h3>When things did not went as expected.</h3>
       </hgroup>
       <h5>You need support with NormCap?</h5>
       <ul>
         <li>
-          For general questions use the <a href="https://github.com/dynobo/normcap/discussions/categories/q-a">discussions</a> forum.
+          For general questions use the <a
+            href="https://github.com/dynobo/normcap/discussions/categories/q-a">discussions</a> forum.
         </li>
         <li>
           If you have found a bug, open an <a href="https://github.com/dynobo/normcap/issues">issue</a>.
@@ -217,19 +230,21 @@
       <h5>You want to support NormCap?</h5>
       <ul>
         <li>Tell your friends about NormCap.</li>
-        <li>Provide <a href="https://github.com/dynobo/normcap/discussions/categories/feedback">feedback</a> and <a href="https://github.com/dynobo/normcap/discussions/categories/ideas">ideas</a>.</li>
-        <li>If you know Python, support on <a href="https://github.com/dynobo/normcap/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">open issues</a>.</li>
-        </ul>
+        <li>Provide <a href="https://github.com/dynobo/normcap/discussions/categories/feedback">feedback</a> and <a
+            href="https://github.com/dynobo/normcap/discussions/categories/ideas">ideas</a>.
+        </li>
+        <li>If you know Python, support on <a
+            href="https://github.com/dynobo/normcap/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">open
+            issues</a>.
+        </li>
+      </ul>
     </article>
 
     <article id="faqs">
       <hgroup>
         <h2>Frequently Asked Questions</h2>
-        <h3>
-          A knowledge base for common issues and additional information.
-        </h3>
+        <h3>A knowledge base for common issues and additional information.</h3>
       </hgroup>
-
       <h4>General</h4>
       <details>
         <summary>How can I add additional languages to NormCap?</summary>
@@ -272,8 +287,8 @@
           <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>.
         </p>
       </details>
-        <details>
-          <summary>Is any other data send to the internet?</summary>
+      <details>
+        <summary>Is any other data send to the internet?</summary>
         <p>
           No telemetry data is collected and by default also no other data is send anywhere.
         </p>
@@ -282,11 +297,12 @@
           accessed server:
         <ul>
           <li>
-          If you enable the check for updates on start, the application checks
-          NormCap's releases page on github.com.</li>
-        <li>
-          If you download additional languages, they are fetched beeing from github.com, too.
-        </li>   </ul>
+            If you enable the check for updates on start, the application checks
+            NormCap's releases page on github.com.</li>
+          <li>
+            If you download additional languages, they are fetched beeing from github.com, too.
+          </li>
+        </ul>
       </details>
       <details>
         <summary>Can I start NormCap via a keyboard shortcut?</summary>
@@ -446,12 +462,8 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
     <article id="python-package">
       <hgroup>
         <h2>Python package</h2>
-        <h3>
-          An advanced installation method as <em>alternative</em> to the prebuild
-          packages.
-        </h3>
+        <h3>An advanced installation method as <em>alternative</em> to the prebuild packages.</h3>
       </hgroup>
-
       <details>
         <summary>Comparision to prebuild packages</summary>
         <div class="row comparison">
@@ -567,7 +579,6 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
     </small>
   </footer>
 
-  <script src="./js/minimal-theme-switcher.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
