@@ -24,8 +24,8 @@
       <li><a href="#download" class="contrast">Download</a></li>
       <li><a href="#features" class="contrast">Features</a></li>
       <li><a href="#usage" class="contrast">Usage</a></li>
-      <li><a href="#faqs" class="contrast">FAQs</a></li>
       <li><a href="#support" class="contrast">Support</a></li>
+      <li><a href="#faqs" class="contrast">FAQs</a></li>
       <li><a href="#python-package" class="contrast">Python package</a></li>
       <li class="switch-light">
         <a href="#" class="contrast" data-theme-switcher="light">🌣</a>
@@ -41,33 +41,26 @@
         <hgroup>
           <h1>NormCap v0.2.5</h1>
           <h2>
-            <a href="https://en.wikipedia.org/wiki/Optical_character_recognition"
-              data-tooltip="Optical Character Recognition">OCR</a>-powered screenshot
+            <a href="https://en.wikipedia.org/wiki/Optical_character_recognition" target="_new">OCR</a>-powered screenshot
             tool to capture text instead of images.
           </h2>
         </hgroup>
-        <p>Download a prebuild package:</p>
+        <p>Download the package for your system:</p>
         <ul>
           <li>
-            <a href="">NormCap-<b>Windows</b>.exe</a> <small>~120 MB</small>
-            <div class="instructions">
-              Run installer and start through start menu
-            </div>
+            <a href="">NormCap-<b>Windows</b>.exe</a>
+            <small>~120 MB</small>
+            <span data-tooltip="Run installer and start through start menu">🛈</span>
           </li>
           <li>
             <a href="">NormCap-<b>Linux</b>.AppImage</a>
             <small>~140 MB</small>
-            <div class="instructions">
-              Make the file executable and run it
-            </div>
+            <span data-tooltip="Make the file executable and run it">🛈</span>
           </li>
           <li>
-            <a href="">NormCap-<b>MacOS</b>.dmg</a> <small>~105 MB</small>
-            <div class="instructions">
-              Unsigned application! You need to allow it on first start:<br />
-              "System Preferences" → "Security & Privacy" → "General" → "Open anyway".
-              <br />(Might need permissions to take screenshots, too.)
-            </div>
+            <a href="">NormCap-<b>MacOS</b>.dmg</a>
+            <small>~105 MB</small>
+            <span class="wide-tooltip" data-tooltip="Unsigned application! You have to grant permissions on first start:&#10;&#13;'System Preferences' → 'Security & Privacy' → 'General' → 'Open anyway'.&#10;&#13;(You might have to grant permissions to take screenshots, too.)">🛈</span>
           </li>
         </ul>
         <p class="align-right">
@@ -80,7 +73,13 @@
     </article>
 
     <article id="features">
-      <h3>Features</h3>
+      <hgroup>
+        <h2>Features</h2>
+        <h3>
+          Characteristics and functionalities that make NormCap interesting.
+        </h3>
+      </hgroup>
+
       <div id="features" class="row features">
         <div class="col-md-6 col-lg-6 col-xl-4">
           <div class="feature feature-1">
@@ -103,42 +102,51 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-6 col-xl-4">
-          <div class="feature feature-5">
-            <b>Smart transforms</b>
+          <div class="feature feature-6">
+            <b>System tray</b>
           </div>
         </div>
         <div class="col-md-6 col-lg-6 col-xl-4">
-          <div class="feature feature-6">
-            <b>System tray</b>
+          <div class="feature feature-5">
+            <b>Heuristic parsing</b>
           </div>
         </div>
       </div>
     </article>
 
     <article id="usage">
-      <h3>Usage</h3>
-      <h4>General</h4>
-      <ul>
-        <li>Start NormCap an wait until a pink border appears</li>
-        <li>Select a region on screen with your mouse<br />
-        <li>Paste the recognized text from the clipboard into anywhere</li>
-        <li>To configure NormCap use the settings menu (⚙) in the top left</li>
+      <hgroup>
+        <h2>Usage</h2>
+        <h3>
+          A short guide for using NormCap and its most important features.
+        </h3>
+      </hgroup>
+      <h4>Quickstart</h4>
+      <ol>
+        <li>Start NormCap and wait until a pink border appears.</li>
+        <li>Select a region on screen with your mouse.</li>
+        <li>Paste the recognized text from the clipboard anywhere you like.</li>
+      </ol>
+        <h4>User Interface</h4>
+        <ul>
+        <li>The settings can be accessed via the <span class="primary">⚙</span>-icon in the top right.</li>
+        <li>In the settings you can adjust the language(s) you are trying to recognize, which is important for a good accuracy.</li>
+        <li>The icons <span class="primary">★</span> or <span class="primary">☰</span> next to the selection-rectangle indicate the active "capture mode" (see below).</li>
         <li>To abort a capture or quit NormCap press <code>&lt;esc&gt;</code></li>
       </ul>
 
       <h4>Capture Modes</h4>
-      <p>The settings menu (⚙) allows switching between two capture modes:</p>
-      <h5>"Raw"-Mode</h5>
+      <p>The settings menu <span class="primary">⚙</span> allows switching between the two capture modes: "parse" and "raw":</p>
+      <ul><li>
+      <p><strong>"Raw"-Mode </strong></p>
       <p>
-        Outputs the detected text just as detected by the OCR software. Keeps the text
+        Marked by the <span class="primary">☰</span> symbol, it outputs the detected text just as detected by the OCR software. Keeps the text
         as recognized, e.g. doesn't remove line-breaks.
-      </p>
-      <h5>"Parse"-Mode <small>(default)</small></h5>
+      </p></li>
+      <li><p><strong>"Parse"-Mode</strong> <small>(default)</small></p>
       <p>
-        Performs some formatting of the output based on certain implemented rules, which
+        Indicated by the <span class="primary">★</span> symbol, it performs some formatting of the output based on certain implemented rules, which
         can take additional information like text position into account.
-      </p>
-      <p>
         In a first step, every rule calculates a "score" to determine the likelihood of being
         responsible for this type of text. In a second step, the rule which achieved the highest
         "score" takes the necessary actions to "transform" the input text according to its
@@ -147,8 +155,8 @@
       <table>
         <thead>
           <tr>
-            <th><strong>Rule</strong></th>
-            <th><strong>Score</strong></th>
+            <th><strong>Rule&NonBreakingSpace;name</strong></th>
+            <th><strong>Score heuristics</strong></th>
             <th><strong>Transform</strong></th>
           </tr>
         </thead>
@@ -160,7 +168,7 @@
           </tr>
           <tr>
             <td><strong>Multi line</strong></td>
-            <td>Multi lines, but single Paragraph</td>
+            <td>Multiple lines, but single paragraph</td>
             <td>Separate using line breaks and trim unnecessary whitespace in each line</td>
           </tr>
           <tr>
@@ -179,15 +187,40 @@
             <td>Transform to line-break separated URLs</td>
           </tr>
         </tbody>
-      </table>
+      </table></li>
+</ul>
+    </article>
 
+    <article id="support">
+      <hgroup>
+        <h2>Support</h2>
+        <h3>
+          When things did not went as expected.
+        </h3>
+      </hgroup>
+      <h5>You need support with NormCap?</h5>
+      <ul>
+        <li>
+          For general questions use the <a href="https://github.com/dynobo/normcap/discussions/categories/q-a">discussions</a> forum.
+        </li>
+        <li>
+          If you have found a bug, open an <a href="https://github.com/dynobo/normcap/issues">issue</a>.
+        </li>
+        <li>Take a look at the <a href="#faqs">frequently asked questions</a> below.</li>
+      </ul>
+      <h5>You want to support NormCap?</h5>
+      <ul>
+        <li>Tell your friends about NormCap.</li>
+        <li>Provide <a href="https://github.com/dynobo/normcap/discussions/categories/feedback">feedback</a> and <a href="https://github.com/dynobo/normcap/discussions/categories/ideas">ideas</a>.</li>
+        <li>If you know Python, support on <a href="https://github.com/dynobo/normcap/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">open issues</a>.</li>
+        </ul>
     </article>
 
     <article id="faqs">
       <hgroup>
         <h2>Frequently Asked Questions</h2>
         <h3>
-          An advanced installation method as alternative to the prebuild packages.
+          A knowledge base for common issues and additional information.
         </h3>
       </hgroup>
 
@@ -208,7 +241,7 @@
           system.
         </p>
       </details>
-      <details>
+      <details id="faqs-improve-detection">
         <summary>How can I improve the detection accuracy?</summary>
         <p>
           The most import thing is to specify the correct language(s) (via settings menu
@@ -230,9 +263,24 @@
         <summary>Is my image/text analyzed in "the cloud"?</summary>
         <p>
           No. The text recognition is performed offline using the OCR framework
-          <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>
-          and also no other data is send (e.g. no telemetry data).
+          <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>.
         </p>
+      </details>
+        <details>
+          <summary>Is any other data send to the internet?</summary>
+        <p>
+          No telemetry data is collected and by default also no other data is send anywhere.
+        </p>
+        <p>However, some (optional) features require accessing resources on the web
+          and therefore expose minimal information (like IP address) to the
+          accessed server:
+        <ul>
+          <li>
+          If you enable the check for updates on start, the application checks
+          NormCap's releases page on github.com.</li>
+        <li>
+          If you download additional languages, they are fetched beeing from github.com, too.
+        </li>   </ul>
       </details>
       <details>
         <summary>Can I start NormCap via a keyboard shortcut?</summary>
@@ -304,7 +352,7 @@
       </details>
 
       <h4>Troubleshooting</h4>
-      <details>
+      <details id="faqs-is-not-starting">
         <summary>NormCap is not starting</summary>
         <p>
           Please try to start again with the <code>-V</code> or
@@ -312,7 +360,7 @@
           for problem solving.
         </p>
       </details>
-      <details>
+      <details id="faqs-couldnt-load-xcb">
         <summary>[Linux] Could not load the Qt platform plugin xcb</summary>
         <p>
           In case you get the following output...
@@ -342,7 +390,7 @@ libxcb-util1/hirsute 0.4.0-1 i386</code></pre>
         </p>
         <pre><code>sudo ln -s /lib/x86_64-linux-gnu/libxcb-util.so.0 /lib/x86_64-linux-gnu/libxcb-util.so.1</code></pre>
       </details>
-      <details>
+      <details id="faqs-doesnt-show-system-tray">
         <summary>[Linux] Normcap does not show up in system tray</summary>
         <p>
           Is your display environment Gnome Shell? Then you probably need to install a
@@ -356,7 +404,7 @@ libxcb-util1/hirsute 0.4.0-1 i386</code></pre>
           <li><a href="https://extensions.gnome.org/extension/2890/tray-icons-reloaded/">Tray Icons: Reloaded</a></li>
         </ul>
       </details>
-      <details>
+      <details id="faqs-doesnt-show-notification">
         <summary>[Linux] Normcap doesn't show a notification after capture</summary>
         <p>
           NormCap's notifcations depend on the system tray functionality. Try running
@@ -366,7 +414,7 @@ libxcb-util1/hirsute 0.4.0-1 i386</code></pre>
       </details>
 
       <h4>Development</h4>
-      <details>
+      <details id="faqs-no-such-file">
         <summary>"No such file or directory" error when running <code>briefcase build</code></summary>
         <p>
           To verify, if this is the issue you are facing, run te build docker
@@ -389,22 +437,17 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
       </details>
     </article>
 
-    <article id="support">
-      <h3>Support</h3>
-      something
-    </article>
-
     <article id="python-package">
       <hgroup>
         <h2>Python package</h2>
         <h3>
-          An advanced installation method as alternative to the prebuild
+          An advanced installation method as <em>alternative</em> to the prebuild
           packages.
         </h3>
       </hgroup>
 
       <details>
-        <summary><b>Comparision to prebuild packages</b></summary>
+        <summary>Comparision to prebuild packages</summary>
         <div class="row comparison">
           <div class="col-sm-6">
             <p>Prebuild:</p>
@@ -426,8 +469,8 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
           </div>
         </div>
       </details>
-      <details>
-        <summary><b>Install on Linux</b></summary>
+      <details id="python-package-install-on-linux">
+        <summary>Install on Linux</summary>
         <ol>
           <li>
             Install dependencies:
@@ -459,8 +502,8 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
           </li>
         </ol>
       </details>
-      <details>
-        <summary><b>Install on MacOS</b></summary>
+      <details id="python-package-install-on-macos">
+        <summary>Install on MacOS</summary>
         <ol>
           <li>
             Install dependencies:
@@ -476,8 +519,8 @@ $ /home/brutus/.briefcase/tools/linuxdeploy-x86_64.AppImage</pre></code>
           </li>
         </ol>
       </details>
-      <details>
-        <summary><b>Install on Windows</b></summary>
+      <details id="python-package-install-on-windows">
+        <summary>Install on Windows</summary>
         <div>
           <ol>
             <li>

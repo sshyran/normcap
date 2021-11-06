@@ -29,18 +29,42 @@ div.grid.features article header {
     var(--block-spacing-horizontal);
 }
 
+/* Hero Image */
+#download div:nth-of-type(2) {
+  display: block;
+  background-image: url("img/normcap.gif");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: calc(100vw * 0.6);
+}
+
+@media (min-width: 992px) {
+  #download > div:nth-of-type(2) {
+    display: block;
+    height: auto;
+  }
+}
+
+#download.grid {
+  grid-column-gap: calc(var(--grid-spacing-horizontal) * 3);
+}
+
 small {
   font-size: smaller;
 }
 
-div.instructions {
+#download ul small {
   opacity: 0.4;
-  font-size: smaller;
-  line-height: 1.3em;
 }
 
 .align-right {
   text-align: right;
+}
+
+.wide-tooltip[data-tooltip]::before {
+  white-space: pre-wrap;
+  width: 420px;
 }
 
 [data-theme="light"],
@@ -49,7 +73,14 @@ div.instructions {
 }
 
 details[open] > summary {
-  margin-bottom: var(--spacing);
+  margin-bottom: calc(var(--spacing) * 1.6);
+  text-decoration: underline;
+}
+
+details summary:focus,
+details[open] > summary:focus,
+details[open] > summary:not(:focus) {
+  color: var(--color);
 }
 
 #logo > img {
@@ -77,24 +108,24 @@ details[open] > summary {
 
 .feature > b {
   display: block;
-  background-color: rgba(39, 43, 44, 0.5);
+  background-color: rgba(39, 43, 44, 0.65);
   text-align: center;
   padding: calc(var(--spacing) * 0.5) 0;
 }
 .feature.feature-1 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/opensource.png");
 }
 .feature.feature-2 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/multimonitor.png");
 }
 .feature.feature-3 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/crossplatform.png");
 }
 .feature.feature-4 {
   background-image: url("/img/languages.png");
 }
 .feature.feature-5 {
-  background-image: url("/img/placeholder.png");
+  background-image: url("/img/transforms.png");
 }
 .feature.feature-6 {
   background-image: url("/img/tray.png");
@@ -106,7 +137,7 @@ details[open] > summary {
     --primary-hover: #c2185b;
     --primary-focus: rgba(216, 27, 96, 0.125);
     --primary-inverse: #fff;
-    --border-color: rgba(128, 136, 141, 0.2);
+    --border-color: rgba(177, 188, 195, 0.2);
     --secondary: var(--primary);
     --secondary-hover: var(--primary-hover);
     --secondary-focus: var(--primary-focus);
