@@ -113,22 +113,22 @@ details[open] > summary:not(:focus) {
   padding: calc(var(--spacing) * 0.5) 0;
 }
 .feature.feature-1 {
-  background-image: url("/img/opensource.png");
+  background-image: url("img/opensource.png");
 }
 .feature.feature-2 {
-  background-image: url("/img/multimonitor.png");
+  background-image: url("img/multimonitor.png");
 }
 .feature.feature-3 {
-  background-image: url("/img/crossplatform.png");
+  background-image: url("img/crossplatform.png");
 }
 .feature.feature-4 {
-  background-image: url("/img/languages.png");
+  background-image: url("img/languages.png");
 }
 .feature.feature-5 {
-  background-image: url("/img/transforms.png");
+  background-image: url("img/transforms.png");
 }
 .feature.feature-6 {
-  background-image: url("/img/tray.png");
+  background-image: url("img/tray.png");
 }
 
 @media only screen and (prefers-color-scheme: dark) {
