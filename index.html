@@ -61,7 +61,7 @@
         ></a>
         <div>
           <div class="hgroup">
-            <h1>NormCap v0.3.0b1</h1>
+            <h1>NormCap v0.3.0b2</h1>
             <h2>
               <a
                 href="https://en.wikipedia.org/wiki/Optical_character_recognition"
@@ -83,7 +83,7 @@
           <ul>
             <li>
               <a
-                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b1/NormCap-0.3.0b1-Windows.msi"
+                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b2/NormCap-0.3.0b2-Windows.msi"
                 >NormCap-<strong>Windows</strong>.exe</a
               >
               <small>~120 MB</small>
@@ -93,7 +93,7 @@
             </li>
             <li>
               <a
-                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b1/NormCap-0.3.0b1-x86_64.AppImage"
+                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b2/NormCap-0.3.0b2-x86_64.AppImage"
                 >NormCap-<strong>Linux</strong>.AppImage</a
               >
               <small>~140 MB</small>
@@ -101,7 +101,7 @@
             </li>
             <li>
               <a
-                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b1/NormCap-0.3.0b1-MacOS.dmg"
+                href="https://github.com/dynobo/normcap/releases/download/v0.3.0b2/NormCap-0.3.0b2-MacOS.dmg"
                 >NormCap-<strong>MacOS</strong>.dmg</a
               >
               <small>~105 MB</small>
@@ -558,15 +558,14 @@
         <details id="faqs-is-not-starting">
           <summary>NormCap is not starting</summary>
           <p>
-            Please try to start again with the <code>-V</code> or
-            <code>--very-verbose</code> option. This should reveal more
+            Please try to start again with the <code>-v debug</code> option. This should reveal more
             information useful for problem solving.
           </p>
         </details>
         <details id="faqs-couldnt-load-xcb">
           <summary>[Linux] Could not load the Qt platform plugin xcb</summary>
           <p>In case you get the following output...</p>
-          <pre><code>$ normcap --very-verbose
+          <pre><code>$ normcap -v debug
 12:06:34 - INFO    - normcap.app            - L:32  - Starting Normcap v0.2.0
 12:06:34 - DEBUG   - normcap.utils          - L:199 - [QT] L:0, func: None, file: None
 12:06:34 - DEBUG   - normcap.utils          - L:200 - [QT] QtInfoMsg - Could not load the Qt platform plugin "xcb" in "" even though it was found.
